@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip install -r requirements.txt || pip install pandas scikit-learn pytest
+  build:
+    commands:
+      - echo "Rodando testes de codigo..."
+      - pytest tests/ -v
+artifacts:
+  files:
+    - '**/*'
