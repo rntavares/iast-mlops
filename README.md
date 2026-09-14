@@ -1,7 +1,16 @@
 # 🚀 FIAP — Pós-Graduação IAST: MLOps
 ### Deploy, Automação, CI/CD e Monitoramento de Modelos de Machine Learning na AWS
 
-Repositório central de materiais, apresentações, documentação técnica e laboratórios práticos da disciplina de **MLOps** do curso de **Pós-Graduação em Inteligência Artificial para Soluções Tecnológicas (IAST)** da **FIAP**.
+[![GitLab](https://img.shields.io/badge/GitLab-Repository-fc6d26?logo=gitlab&logoColor=white)](https://gitlab.com/rntavares/fiap-iast-mlops)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![AWS](https://img.shields.io/badge/Cloud-AWS-232F3E?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Docker](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![MLflow](https://img.shields.io/badge/Tracking-MLflow-0194E2?logo=mlflow&logoColor=white)](https://mlflow.org/)
+
+Repositório oficial de materiais, documentação técnica, apresentações e laboratórios práticos da disciplina de **MLOps** do curso de **Pós-Graduação em Inteligência Artificial para Soluções Tecnológicas (IAST)** da **FIAP**.
+
+🔗 **Repositório GitLab:** [https://gitlab.com/rntavares/fiap-iast-mlops](https://gitlab.com/rntavares/fiap-iast-mlops)
 
 ---
 
@@ -19,10 +28,33 @@ O objetivo desta disciplina é capacitar engenheiros e cientistas de dados a lev
 
 ---
 
+## 💻 Primeiros Passos & Clonando o Repositório
+
+### Clonar via HTTPS:
+```bash
+git clone https://gitlab.com/rntavares/fiap-iast-mlops.git
+cd fiap-iast-mlops
+```
+
+### Clonar via SSH:
+```bash
+git clone git@gitlab.com:rntavares/fiap-iast-mlops.git
+cd fiap-iast-mlops
+```
+
+### Vincular um repositório local existente:
+```bash
+git remote set-url origin https://gitlab.com/rntavares/fiap-iast-mlops.git
+git branch -M main
+git push -u origin main
+```
+
+---
+
 ## 📂 Estrutura do Repositório
 
 ```text
-MLOps/
+fiap-iast-mlops/
 ├── 📚 Docs-Aulas-MLOps/            # Apostilas, capítulos teóricos e desafios
 │   ├── capitulos/                  # Documentos detalhados de cada aula (01 a 04)
 │   ├── desafio/                    # Especificação do Desafio Final Integrado
@@ -120,5 +152,6 @@ O diretório `Docs-Aulas-MLOps/desafio/` contém a especificação do **Desafio 
 
 ## 👨‍🏫 Autor & Coordenação
 
+* **Professor / Autor:** Rafael Tavares ([@rntavares](https://gitlab.com/rntavares))
 * **Curso:** Pós-Graduação em Inteligência Artificial para Soluções Tecnológicas (IAST)
 * **Instituição:** [FIAP](https://www.fiap.com.br)
