@@ -15,7 +15,7 @@ env:
 
 jobs:
   test-code:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fixo: o ubuntu-latest muda de versão sozinho
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -26,7 +26,7 @@ jobs:
 
   test-data:
     needs: test-code            # só roda se os testes de código passarem
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fixo: o ubuntu-latest muda de versão sozinho
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -37,7 +37,7 @@ jobs:
 
   test-model:
     needs: test-data            # só roda se os dados estiverem OK
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # fixo: o ubuntu-latest muda de versão sozinho
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
