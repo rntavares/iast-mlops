@@ -1,7 +1,7 @@
 """Aula 02 - Parte 3: valida o @challenger e, se ele for melhor, o promove a @champion.
 
     python promover_modelo.py              # promoção com validação
-    python promover_modelo.py --versao 1   # rollback: aponta @champion para a versão 1
+    python promover_modelo.py --versao 1   # move @champion à força para a versão 1 (ex.: rollback)
 
 Promover ou voltar atrás é só mover o alias. Quem consome o modelo carrega
 "models:/churn-model@champion" e não precisa mudar nada.
@@ -38,7 +38,8 @@ def f1(versao):
 
 if args.versao:
     client.set_registered_model_alias(NOME_MODELO, "champion", args.versao)
-    raise SystemExit(f"Rollback: @champion agora aponta para a versão {args.versao}.")
+    print(f"@champion movido manualmente: agora aponta para a versão {args.versao} (sem validação).")
+    raise SystemExit(0)
 
 challenger = versao_do_alias("challenger")
 if challenger is None:

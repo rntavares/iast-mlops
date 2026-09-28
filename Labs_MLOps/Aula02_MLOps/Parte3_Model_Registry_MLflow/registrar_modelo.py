@@ -35,6 +35,8 @@ if not runs:
 run = runs[0]
 print(f"Run escolhido: {run.info.run_id[:8]} | f1_score={run.data.metrics['f1_score']:.3f}")
 
-versao = mlflow.register_model(f"runs:/{run.info.run_id}/model", NOME_MODELO).version
+# No MLflow 3, o modelo salvo pelo run fica em models:/<model_id> (não mais em runs:/<id>/model)
+modelo_do_run = run.outputs.model_outputs[0].model_id
+versao = mlflow.register_model(f"models:/{modelo_do_run}", NOME_MODELO).version
 client.set_registered_model_alias(NOME_MODELO, "challenger", versao)
 print(f"{NOME_MODELO} versão {versao} registrada como @challenger")

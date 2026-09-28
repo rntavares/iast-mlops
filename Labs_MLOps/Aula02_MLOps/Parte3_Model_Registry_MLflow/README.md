@@ -29,11 +29,17 @@ python promover_modelo.py
 ```
 O `--ultimo` registra o run mais recente (o ruim) em vez do melhor. A validação deve barrar a promoção, e o `@champion` continua onde estava.
 
-**4. Faça um rollback:**
+**4. Simule um incidente e faça o rollback.** Use os números de versão que o `promover_modelo.py` do passo 3 mostrou. Primeiro, alguém força o modelo ruim (o `@challenger` barrado) para produção, pulando a validação:
 ```bash
-python promover_modelo.py --versao 1
+python promover_modelo.py --versao <versão do @challenger>
 python prever.py
 ```
+A probabilidade de churn do mesmo cliente muda (cai de cerca de 96% para 72%): o modelo ruim está em produção. Rollback, de volta ao `@champion` anterior:
+```bash
+python promover_modelo.py --versao <versão do @champion>
+python prever.py
+```
+O `prever.py` não mudou uma linha: só o alias se moveu.
 
 **5. Veja o histórico na interface** (`Labs_MLOps/ui_mlflow.sh`, porta 5000) → **Models → churn-model**: cada versão, seus aliases e o run de origem.
 

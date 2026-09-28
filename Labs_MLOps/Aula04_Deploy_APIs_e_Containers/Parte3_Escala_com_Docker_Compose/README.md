@@ -35,7 +35,7 @@ docker compose ps
 docker stop <nome-de-uma-réplica>
 python testar_balanceamento.py
 ```
-O usuário não percebe nada: o balanceador tira a réplica do rodízio e manda as requisições para as outras. Agora rode `docker compose up -d` e veja o Compose recriar a réplica que falta. Num Kubernetes, o Deployment faz isso sozinho, e o HPA ajusta a quantidade de réplicas conforme a carga.
+O usuário não percebe nada: o balanceador tira a réplica do rodízio e manda as requisições para as outras. Agora rode `docker compose up -d` e depois `docker compose ps`: o Compose volta ao número de réplicas **declarado no arquivo** (`replicas: 3`), e não às 5 do `--scale`. Para manter 5, repita `docker compose up -d --scale api=5`. Num Kubernetes, o Deployment recria a réplica sozinho, sem ninguém rodar comando, e o HPA ajusta a quantidade de réplicas conforme a carga.
 
 **5. URL pública (2 min):** na aba **Ports** do Codespaces, clique com o botão direito na porta 8080 → **Port Visibility → Public**. Abra o endereço em `/docs` e mande para um colega testar.
 
