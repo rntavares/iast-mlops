@@ -15,6 +15,42 @@ Para cada lab, este roteiro diz **o que você vai fazer**, **o que precisa ter a
 
 ---
 
+## Como a disciplina está organizada
+
+- **4 aulas**, cada uma com **3 partes** em vídeo.
+- **1 lab por parte**, de 10 a 15 minutos: 12 labs no total.
+- No fim, o **Desafio Final Integrado** (`Docs-Aulas-MLOps/desafio/`), que junta as quatro aulas num cenário único.
+
+### Os labs formam uma linha contínua
+
+Vários labs usam o que o anterior produziu, por isso **faça na ordem**. Se pular algum, a seção "Antes de começar" de cada lab mostra como gerar o que falta em poucos segundos.
+
+| Lab | Usa o que foi feito em |
+|---|---|
+| 01.2 — Model Registry | o `model.joblib` do Lab 01.1 |
+| 01.3 — Deploy e monitoramento | uma versão **aprovada** no Lab 01.2 |
+| 02.1 — Caça ao tesouro | funciona melhor com a Aula 01 feita |
+| 02.3 — Promoção com aliases | os experimentos do Lab 02.2 |
+| 03.2 — Testes de dados e modelo | o pipeline do Lab 03.1, já no GitHub |
+| 03.3 — Canary release | nada: o script cria o que faltar |
+| 04.2 — Docker e registry | o `model.joblib` do Lab 04.1 |
+| 04.3 — Docker Compose | a imagem publicada no Lab 04.2 (ou o Compose faz o build) |
+
+As Aulas 01, 02 e 03 compartilham o **mesmo MLflow** (`Labs_MLOps/mlflow.db`): o que você registra numa aula continua lá na seguinte. **Não apague o `mlflow.db`** entre as aulas, a não ser que queira recomeçar do zero.
+
+## Sugestão de ritmo
+
+| Quando | O que fazer |
+|---|---|
+| Uma vez, antes da Aula 01 | preparar o ambiente (seção seguinte, ≈ 5 min) |
+| Em cada parte de aula | assistir ao vídeo da parte → fazer o lab logo em seguida → anotar as respostas de "Anote para a discussão" |
+| No fim de cada aula | marcar o seu progresso no fim deste roteiro e **parar o codespace** |
+| Depois da Aula 04 | fazer o Desafio Final Integrado |
+
+Fazer o lab logo depois do vídeo da parte é o que mais ajuda: os comandos fazem sentido enquanto o conceito ainda está fresco.
+
+---
+
 ## Antes da primeira aula (5 min, uma única vez)
 
 - [ ] Crie uma conta gratuita em https://github.com, se ainda não tiver. Com e-mail de estudante, peça também o **GitHub Student Developer Pack**: ele aumenta a sua cota gratuita do Codespaces.
@@ -499,6 +535,19 @@ python Labs_MLOps/Aula01_Ciclo_de_Vida_de_Modelos/Parte1_EDA_e_Treino/treinar_mo
 
 ---
 
+## Registro de progresso
+
+Marque cada lab quando ver o "✅ Deu certo se…" na sua tela.
+
+| Aula | Parte 1 | Parte 2 | Parte 3 |
+|---|---|---|---|
+| 01 — Ciclo de vida | [ ] EDA e treino | [ ] Model Registry | [ ] Deploy e monitoramento |
+| 02 — MLOps | [ ] Caça ao tesouro | [ ] Experiment tracking | [ ] Promoção com aliases |
+| 03 — CI/CD para ML | [ ] CI com GitHub Actions | [ ] Testes de dados e modelo | [ ] Canary release |
+| 04 — APIs e containers | [ ] API com FastAPI | [ ] Docker e registry | [ ] Docker Compose |
+
+---
+
 ## Problemas comuns (em qualquer lab)
 
 | Sintoma | O que fazer |
@@ -512,3 +561,11 @@ python Labs_MLOps/Aula01_Ciclo_de_Vida_de_Modelos/Parte1_EDA_e_Treino/treinar_mo
 | Faltou a uma aula | Cada lab diz em "Antes de começar" o que precisa e como gerar rapidamente |
 
 Ao terminar cada aula: **pare o codespace** em github.com/codespaces → ⋯ → **Stop**.
+
+---
+
+## E depois dos labs: o Desafio Final Integrado
+
+O desafio (`Docs-Aulas-MLOps/desafio/Desafio_Final_Integrado.docx`) é uma atividade individual de reflexão: uma empresa de e-commerce tem um modelo de churn que funciona no notebook e precisa levá-lo para produção em 6 semanas. Você responde, em no máximo 2 páginas, uma pergunta por aula: o ciclo de vida do modelo, o uso de MLflow e de ferramentas MLOps, os testes e a estratégia de deploy, e como servir e escalar o modelo.
+
+Os labs são a sua base para responder: tudo o que o desafio pergunta, você já fez na prática aqui. Releia as suas anotações de "Anote para a discussão" antes de começar. Não existe resposta certa; o que conta é justificar os trade-offs.
