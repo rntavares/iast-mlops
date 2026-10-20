@@ -11,6 +11,8 @@ Os labs usam o mesmo cenário do começo ao fim: um modelo de **previsão de chu
 | **03 — CI/CD para ML** | [CI com GitHub Actions](Aula03_CICD_para_ML/Parte1_CI_GitHub_Actions/) (15 min) | [Testes de dados e de modelo no pipeline](Aula03_CICD_para_ML/Parte2_Testes_Dados_e_Modelo/) (15 min) | [Canary release](Aula03_CICD_para_ML/Parte3_Canary_Release/) (15 min) |
 | **04 — Deploy de APIs e containers** | [API com FastAPI](Aula04_Deploy_APIs_e_Containers/Parte1_API_com_FastAPI/) (12 min) | [Docker e registry de imagens](Aula04_Deploy_APIs_e_Containers/Parte2_Docker_e_Registry/) (15 min) | [Escalando com Docker Compose](Aula04_Deploy_APIs_e_Containers/Parte3_Escala_com_Docker_Compose/) (15 min) |
 
+📘 **Comece pelo [Roteiro do aluno](ROTEIRO_DO_ALUNO.md):** ele guia os 12 labs na ordem, com o que fazer, como saber que deu certo e o que fazer se der errado.
+
 Cada pasta tem seu próprio `README.md` com o passo a passo. Os comandos partem da raiz do repositório.
 
 ## Antes da primeira aula (5 min, uma única vez)

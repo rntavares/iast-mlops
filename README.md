@@ -63,6 +63,7 @@ iast-mlops/
 ├── .devcontainer/                  # Ambiente do GitHub Codespaces (labs)
 │
 ├── 🛠️ Labs_MLOps/                  # Laboratórios práticos (12 labs, 10 a 15 min cada)
+│   ├── ROTEIRO_DO_ALUNO.md         # Roteiro dos 12 labs, na ordem das aulas
 │   ├── dados/                      # Dataset de churn usado em todos os labs
 │   ├── Aula01_Ciclo_de_Vida_de_Modelos/
 │   │   ├── Parte1_EDA_e_Treino/
@@ -124,6 +125,8 @@ iast-mlops/
 ---
 
 ## 🛠️ Pré-requisitos & Ambiente de Desenvolvimento
+
+📘 **Roteiro dos labs:** [`Labs_MLOps/ROTEIRO_DO_ALUNO.md`](Labs_MLOps/ROTEIRO_DO_ALUNO.md).
 
 Para os laboratórios práticos, basta uma **conta gratuita no GitHub**. Os labs rodam no **GitHub Codespaces**, que já vem com Python 3.12, Docker e todas as dependências instaladas (`.devcontainer/`). Não é preciso conta em nuvem nem cartão de crédito. O passo a passo inicial está em `Labs_MLOps/README.md`.
 
